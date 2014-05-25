@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>831</width>
+    <height>444</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Sylfaen</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>უნაკერო კლონირების ინსტრუმენტი</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="global.qrc">
+    <normaloff>:/new/pics/icon.ico</normaloff>:/new/pics/icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGraphicsView" name="graphicsView_source">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>400</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>640</width>
+      <height>480</height>
+     </size>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="resizeAnchor">
+     <enum>QGraphicsView::NoAnchor</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView_destination">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>400</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>640</width>
+      <height>480</height>
+     </size>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>401</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>პარამეტრები</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>იტერაციების რაოდენომა</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_iterations">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>30</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>999999</number>
+     </property>
+     <property name="singleStep">
+      <number>50</number>
+     </property>
+     <property name="value">
+      <number>1000</number>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_mix_gradients">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>30</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text">
+      <string>გრადიენტების შერევა</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>381</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="grid_mask">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>831</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>ფაილი</string>
+    </property>
+    <addaction name="action_source_img_select"/>
+    <addaction name="action_destination_img_select"/>
+    <addaction name="separator"/>
+    <addaction name="action_save"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>პროგრამა</string>
+    </property>
+    <addaction name="action_pen_width"/>
+    <addaction name="action_pen_color"/>
+    <addaction name="action_pen_clear"/>
+    <addaction name="separator"/>
+    <addaction name="action_blend"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>დახმარება</string>
+    </property>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <action name="action_source_img_select">
+   <property name="text">
+    <string>პირველი სურათის არჩევა</string>
+   </property>
+  </action>
+  <action name="action_destination_img_select">
+   <property name="text">
+    <string>მეორე სურათის არჩევა</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="icon">
+    <iconset resource="global.qrc">
+     <normaloff>:/new/pics/save.ico</normaloff>:/new/pics/save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>შენახვა</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>პროგრამის შესახებ</string>
+   </property>
+  </action>
+  <action name="action_pen_width">
+   <property name="text">
+    <string>ფუნჯის ზომა</string>
+   </property>
+  </action>
+  <action name="action_pen_color">
+   <property name="text">
+    <string>ფუნჯის ფერი</string>
+   </property>
+  </action>
+  <action name="action_pen_clear">
+   <property name="text">
+    <string>მონიშნულის გასუფთავება</string>
+   </property>
+  </action>
+  <action name="action_blend">
+   <property name="text">
+    <string>კლონირება</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="global.qrc"/>
+ </resources>
+ <connections/>
+</ui>
