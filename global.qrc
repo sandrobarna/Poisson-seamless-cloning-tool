@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/new/pics">
-        <file>icon.ico</file>
-        <file>save.ico</file>
-    </qresource>
-</RCC>
